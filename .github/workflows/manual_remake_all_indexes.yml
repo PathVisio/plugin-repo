@@ -52,6 +52,7 @@ jobs:
               table_html+=$'\n'
             done
 
+            # Close the table
             table_html+="</table>"
 
             # Add parent link if not the root directory (only once)
