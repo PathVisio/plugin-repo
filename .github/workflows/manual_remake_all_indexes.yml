@@ -1,4 +1,4 @@
-name: Utility - remake all index pages
+name: Utility - Remake All Index Pages
 
 on:
   workflow_dispatch:
@@ -6,33 +6,34 @@ on:
 jobs:
   remake-all-indexes:
     runs-on: ubuntu-latest  
-    name: Remake file index pages
+    name: Remake File Index Pages
     steps:
+      # Checkout the repository
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0 
 
-      - name: Generate index files
+      # Generate index files
+      - name: Generate Index Files
         run: |
           header_html="$(cat template_header.html)"
           footer_html="$(cat template_footer.html)"
 
-          ## RECURSIVE FUNCTION TO PROCESS DIRECTORIES ##
+          # Recursive function to process directories
           generate_index_for_directory() {
             local dir_path="$1"
             local parent_link="$2"
 
             echo "Working on directory: $dir_path"
-            table_html=""
-            table_html+="<table class=\"table table-striped table-bordered table-hover\">"
+            table_html="<table class=\"table table-striped table-bordered table-hover\">"
             table_html+="<thead class=\"table-dark\"><tr><th>Item Name</th><th>Type</th><th>File Count / Size</th><th>Last Modified</th></tr></thead>"
             table_html+=$'\n'
 
             # Add directories to the index
             for subdir in $(find "$dir_path" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort)
             do
-              folder=$(basename $subdir)
-              filecount=$(find "$subdir" -mindepth 1 -type f ! -name "*.html" | wc -l)
+              folder=$(basename "$subdir")
+              filecount=$(find "$subdir" -type f ! -name "*.html" | wc -l)
               modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
               table_html+="<tr><td><a class=\"file-link\" href=\"$folder/index.html\">$folder</a></td><td>Directory</td><td>$filecount files</td><td>$modified</td></tr>"
               table_html+=$'\n'
@@ -41,7 +42,7 @@ jobs:
               generate_index_for_directory "$subdir" "../"
             done
 
-            # Add XML files to the index
+            # Add files to the index
             for file in $(find "$dir_path" -mindepth 1 -maxdepth 1 -type f -name "*.xml" | sort)
             do
               filename=$(basename "$file")
@@ -53,20 +54,23 @@ jobs:
 
             table_html+="</table>"
 
-            # Add parent link if not the root directory
+            # Add parent link if not the root directory (only once)
             if [[ "$parent_link" != "" ]]; then
-              table_html+='<p><a href="'$parent_link'">Parent directory</a></p>'
+              parent_html='<p><a href="'$parent_link'">Parent directory</a></p>'
+            else
+              parent_html=""
             fi
 
             # Assemble and save HTML
-            folder_html="$header_html$table_html$footer_html"
+            folder_html="$header_html$table_html$parent_html$footer_html"
             echo "$folder_html" > "$dir_path/index.html"
           }
 
-          ## START FROM ROOT DIRECTORY ##
+          # Start from the root directory
           generate_index_for_directory "." ""
           
+      # Commit changes
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update file index pages
+          commit_message: Update all file index pages
           file_pattern: 'index.html **/index.html'
