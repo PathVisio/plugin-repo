@@ -1,0 +1,122 @@
+name: 2. On file change, update index pages
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.html'
+      - '.github/**'
+
+jobs:
+  update-indexes:
+    runs-on: ubuntu-latest  
+    name: Update file index pages
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      - name: Get dir_names of changed files
+        id: changed-files-dir-names
+        uses: tj-actions/changed-files@v35
+        with:
+          dir_names: "true"
+          dir_names_exclude_root: "true"
+          files_ignore: |
+            .github
+            .html
+
+      - name: Generate index files
+        run: |
+          header_html="$(cat template_header.html)"
+          footer_html="$(cat template_footer.html)"
+          unique_release_dirs=()
+          for dir in ${{ steps.changed-files-dir-names.outputs.all_modified_files }}
+          do
+            if [ ! -d "$dir" ]; then
+              echo "$dir has been deleted"
+              continue
+            fi
+            echo "$dir contains modified files"
+            # Collect unique list of release folders
+            release_dir=${dir%/*}
+            if [[ ! " ${unique_release_dirs[@]} " =~ " ${release_dir} " ]]; then
+              unique_release_dirs+=("$release_dir")
+            fi
+            type=${dir##*/} 
+            ## MAKE FILE TABLE ##
+            table_html=""
+            table_html+="<table class=\"table table-striped table-bordered table-hover\">"
+            table_html+="<thead class="table-dark"><tr><th>File Name</th><th>File Size</th><th>Last Modified</th></tr></thead>"
+            table_html+=$'\n'
+            # Loop through all files in the directory
+            for file in $(find "$dir" -mindepth 1 -maxdepth 1 -type f ! -name "*.html" | sort)
+            do
+              if [[ -f "$file" ]]; then
+                # Get the file name, size, and last modified date
+                filename=$(basename "$file")
+                filesize=$(du -h "$file" | cut -f1)
+                modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$file")
+                # Create a table row with the file information
+                table_html+="<tr><td><a class="file-link" id="File" href=\"$filename\">$filename</a></td><td>$filesize</td><td>$modified</td></tr>"
+                table_html+=$'\n'
+              fi
+            done
+            table_html+="</table>"
+            # Add parent link (expect top level index)
+            table_html+='<p><a href="../">Parent directory</a></p>'
+            # Assemble and save HTML
+            file_html="$header_html$table_html$footer_html"
+            echo "$file_html" > "$dir/index.html"
+          done
+          for release_dir in ${unique_release_dirs[@]}
+          do
+            ## MAKE FOLDER TABLE ##
+            table_html=""
+            table_html+="<table class=\"table table-striped table-bordered table-hover\">"
+            table_html+="<thead class="table-dark"><tr><th>Folder Name</th><th>File Count</th><th>Last Modified</th></tr></thead>"
+            table_html+=$'\n'
+            # Loop through all folders in the directory
+            for subdir in $(find "$release_dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort)
+            do
+              folder=$(basename $subdir)
+              # Get the count, and last modified date
+              filecount=$(find $subdir -mindepth 1 -maxdepth 1 -type f ! -name "*.html" | wc -l)
+              modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
+              # Create a table row with the file information 
+              table_html+="<tr><td><a class="file-link" href=\"$folder\">$folder</a></td><td>$filecount</td><td>$modified</td></tr>"
+              table_html+=$'\n'
+            done
+            table_html+="</table>"
+            # Add parent link (expect top level index)
+            table_html+='<p><a href="../">Parent directory</a></p>'
+            # Assemble and save HTML
+            folder_html="$header_html$table_html$footer_html"
+            echo "$folder_html" > "$release_dir/index.html"
+          done
+          ## MAKE HOME TABLE ##
+          # whether adding or deleting dirs
+            table_html=""
+            table_html+="<table class=\"table table-striped table-bordered table-hover\">"
+            table_html+="<thead class="table-dark"><tr><th>Folder Name</th><th>File Count</th><th>Last Modified</th></tr></thead>"
+            table_html+=$'\n'
+            # Loop through all folders in the directory
+            for subdir in $(find . -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort -rn)
+            do
+              folder=$(basename $subdir)
+              # Get the count, and last modified date
+              filecount=$(find $subdir -mindepth 2 -maxdepth 2 -type f ! -name "*.html" | wc -l)
+              modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
+              # Create a table row with the file information 
+              table_html+="<tr><td><a class="file-link" href=\"$folder\">$folder</a></td><td>$filecount</td><td>$modified</td></tr>"
+              table_html+=$'\n'
+            done
+            table_html+="</table>"
+            # Assemble and save HTML
+            home_html="$header_html$table_html$footer_html"
+            echo "$home_html" > "./index.html"
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update file index pages
+          file_pattern: 'index.html **/index.html'
