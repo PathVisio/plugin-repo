@@ -1,0 +1,1777 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="pathvisioorg_wordpress">
+	<table_data name="repository">
+	<row>
+		<field name="repository_id">1</field>
+		<field name="name">PathVisio repository</field>
+		<field name="url">http://repository.pathvisio.org</field>
+	</row>
+	</table_data>
+	<table_data name="affiliation">
+	<row>
+		<field name="affiliation_id">2</field>
+		<field name="name">Department of Bioinformatics, Maastricht University</field>
+		<field name="website">http://www.bigcat.unimaas.nl</field>
+	</row>
+	<row>
+		<field name="affiliation_id">3</field>
+		<field name="name">General Bioinformatics, Reading, UK</field>
+		<field name="website">http://www.generalbioinformatics.com/</field>
+	</row>
+	<row>
+		<field name="affiliation_id">4</field>
+		<field name="name">Microbiology &amp; Systems Biology, TNO, Zeist, The Netherlands</field>
+		<field name="website">http://www.tno.nl/</field>
+	</row>
+	<row>
+		<field name="affiliation_id">5</field>
+		<field name="name">Google Summer of Code student</field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="affiliation_id">6</field>
+		<field name="name">Eindhoven University of Technology</field>
+		<field name="website"></field>
+	</row>
+	</table_data>
+	<table_data name="developer">
+	<row>
+		<field name="developer_id">2</field>
+		<field name="firstname">Martijn</field>
+		<field name="lastname">van Iersel</field>
+		<field name="email">mvaniersel@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">3</field>
+		<field name="firstname">Thomas</field>
+		<field name="lastname">Kelder</field>
+		<field name="email">thomaskelder@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">4</field>
+		<field name="firstname">Adem</field>
+		<field name="lastname">Bilican</field>
+		<field name="email">adem.bilican@unil.ch</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">5</field>
+		<field name="firstname">Martina</field>
+		<field name="lastname">Kutmon</field>
+		<field name="email">mkutmon@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">6</field>
+		<field name="firstname">Anwesha</field>
+		<field name="lastname">Bohler</field>
+		<field name="email">anweshabohler@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">7</field>
+		<field name="firstname">Jake</field>
+		<field name="lastname">Fried</field>
+		<field name="email"></field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">8</field>
+		<field name="firstname">Sravanthi</field>
+		<field name="lastname">Sinha</field>
+		<field name="email">kmitsravanthi@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">9</field>
+		<field name="firstname">Ferry</field>
+		<field name="lastname">Jagers</field>
+		<field name="email">ferryjagers@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">10</field>
+		<field name="firstname">Sriharsha</field>
+		<field name="lastname">Pamu</field>
+		<field name="email">kmitharsha@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">11</field>
+		<field name="firstname">Rohan</field>
+		<field name="lastname">Saxena</field>
+		<field name="email">rohansaxenabits@gmail.com</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">12</field>
+		<field name="firstname">Ruizhou</field>
+		<field name="lastname">Guo</field>
+		<field name="email"></field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">13</field>
+		<field name="firstname">Stefan</field>
+		<field name="lastname">van Helden</field>
+		<field name="email">S.vanHelden@student.maastrichtuniversity.nl</field>
+		<field name="open_id"></field>
+	</row>
+	<row>
+		<field name="developer_id">14</field>
+		<field name="firstname">Jonathan</field>
+		<field name="lastname">Melius</field>
+		<field name="email">jonathan.melius@maastrichtuniversity.nl</field>
+		<field name="open_id" xsi:nil="true" />
+	</row>
+	</table_data>
+	<table_data name="bundle">
+	<row>
+		<field name="bundle_id">2</field>
+		<field name="name">GO plugin</field>
+		<field name="symbolic_name">org.pathvisio.go</field>
+		<field name="type">plugin</field>
+		<field name="description">Basic GeneOntology plugin to create GO pathways visualizing all genes annotated with a specific term or its one of its subterms. The terms are structured hierarchically. All genes are annotated and data can be automatically visualized on them.</field>
+		<field name="faq"></field>
+		<field name="short_description">Basic GO plugin to visualized genes annotated with a specific GO term.</field>
+		<field name="website">https://www.pathvisio.org/wiki/GoPlugin</field>
+	</row>
+	<row>
+		<field name="bundle_id">3</field>
+		<field name="name">HTML export plugin</field>
+		<field name="symbolic_name">org.pathvisio.htmlexport</field>
+		<field name="type">plugin</field>
+		<field name="description">This plugin has two main function: (1) Exports a pathway as an html page. (2) Export pathway statistics result with all pathway images as html pages. </field>
+		<field name="faq"></field>
+		<field name="short_description">Exports pathways and pathway statistics results as HTML pages.</field>
+		<field name="website">http://developers.pathvisio.org/wiki/HtmlExporter</field>
+	</row>
+	<row>
+		<field name="bundle_id">4</field>
+		<field name="name">org.kohsuke.args4j</field>
+		<field name="symbolic_name">org.kohsuke.args4j</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">5</field>
+		<field name="name">Gene Set Enrichtment Analysis Plugin</field>
+		<field name="symbolic_name">org.pathvisio.gsea.plugin</field>
+		<field name="type">plugin</field>
+		<field name="description">&lt;html&gt;This plugin implements a standard Gene Set Enrichment Analysis method that can be used to identify over represented pathways in the data set.&lt;br&gt;It also allows to load gene sets from MSigDB (http://www.broadinstitute.org/gsea/).&lt;/html&gt;</field>
+		<field name="faq"></field>
+		<field name="short_description">Gene set enrichment analysis plugin for PathVisio</field>
+		<field name="website">http://developers.pathvisio.org/wiki/GseaPluginHelp</field>
+	</row>
+	<row>
+		<field name="bundle_id">6</field>
+		<field name="name">Gene Set Enrichtment library</field>
+		<field name="symbolic_name">org.pathvisio.gsea.ora</field>
+		<field name="type">lib</field>
+		<field name="description">Library containing gene set enrichment algorithm used by GSEA plugin.</field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">7</field>
+		<field name="name">com.springsource.javax.servlet</field>
+		<field name="symbolic_name">com.springsource.javax.servlet</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">8</field>
+		<field name="name">com.springsource.org.jfree</field>
+		<field name="symbolic_name">com.springsource.org.jfree</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">9</field>
+		<field name="name">com.springsource.org.jfree.chart</field>
+		<field name="symbolic_name">com.springsource.org.jfree.chart</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">10</field>
+		<field name="name">MAPPBuilder plugin</field>
+		<field name="symbolic_name">org.pathvisio.mappbuilder</field>
+		<field name="type">plugin</field>
+		<field name="description">The MAPPBuilder plugin helps you get started quickly on creating a new pathway. Given a list of gene identifiers, MAPPBuilder will build a simple prototype pathway for you containing those genes, eliminating the step of manual searching for each gene/gene product you want to include.</field>
+		<field name="faq"></field>
+		<field name="short_description">Automated way to create data nodes from file.</field>
+		<field name="website">http://developers.pathvisio.org/wiki/MappBuilderHelp</field>
+	</row>
+	<row>
+		<field name="bundle_id">24</field>
+		<field name="name">MiniMap</field>
+		<field name="symbolic_name">org.pathvisio.minimap</field>
+		<field name="type">plugin</field>
+		<field name="description">This plugin adds a sidetab in PathVisio, containing a mini map view of the pathway. With the red rectangle the user can navigate through larger pathways.</field>
+		<field name="faq"></field>
+		<field name="short_description">A mini map view of the pathways that allows easy navigation in larger pathways.</field>
+		<field name="website">http://plugins.pathvisio.org/minimap/</field>
+	</row>
+	<row>
+		<field name="bundle_id">23</field>
+		<field name="name">PathVisioRPC</field>
+		<field name="symbolic_name">org.pathvisio.xmlrpc</field>
+		<field name="type">plugin</field>
+		<field name="description">PathVisioRPC is an XML-RPC interface for PathVisio. It allows users to use PathVisio functionality directly in their favourite analytical environment,</field>
+		<field name="faq"></field>
+		<field name="short_description">PathVisioRPC is an XML-RPC interface for PathVisio.</field>
+		<field name="website">http://projects.bigcat.unimaas.nl/pathvisiorpc/index</field>
+	</row>
+	<row>
+		<field name="bundle_id">12</field>
+		<field name="name">Apache Commons Httpclient</field>
+		<field name="symbolic_name">org.apache.commons.httpclient</field>
+		<field name="type">lib</field>
+		<field name="description">Apache Commons Httpclient</field>
+		<field name="faq"></field>
+		<field name="short_description">Apache Commons Httpclient</field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">13</field>
+		<field name="name">Appache Commons IO</field>
+		<field name="symbolic_name">org.apache.commons.io</field>
+		<field name="type">lib</field>
+		<field name="description">Appache Commons IO</field>
+		<field name="faq"></field>
+		<field name="short_description">Appache Commons IO</field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">14</field>
+		<field name="name">Apache XMLRPC</field>
+		<field name="symbolic_name">org.apache.xmlrpc</field>
+		<field name="type">lib</field>
+		<field name="description">Apache XMLRPC</field>
+		<field name="faq"></field>
+		<field name="short_description">Apache XMLRPC</field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">15</field>
+		<field name="name">BridgeDbConfig Plugin</field>
+		<field name="symbolic_name">pvplugins-bridgedbSettings</field>
+		<field name="type">plugin</field>
+		<field name="description">The BridgeDb configuration plugin let's you configure identifier mapping resources to be used in PathVisio. The mapping resources will be used to link pathway identifiers to identifiers in your dataset, during data import and visualization. The mapping resources are also used to fetch information for the backpage side-panel.</field>
+		<field name="faq"></field>
+		<field name="short_description">The BridgeDb configuration plugin let's you configure identifier mapping resources to be used in PathVisio.</field>
+		<field name="website">http://developers.pathvisio.org/wiki/BridgeDbConfigPluginHelp</field>
+	</row>
+	<row>
+		<field name="bundle_id">16</field>
+		<field name="name">Quick Search Plugin</field>
+		<field name="symbolic_name">pvplugins-qsearch</field>
+		<field name="type">plugin</field>
+		<field name="description">The Quick Search plug-in adds a search box to the main toolbar of PathVisio. With this search box you can search for identifiers and text within the pathway that is currently open.</field>
+		<field name="faq"></field>
+		<field name="short_description">The Quick Search plug-in adds a search box with which one can search for identifiers and text within the pathway that is currently open.</field>
+		<field name="website">http://developers.pathvisio.org/wiki/QuickSearchPluginHelp</field>
+	</row>
+	<row>
+		<field name="bundle_id">17</field>
+		<field name="name">com.google.collect</field>
+		<field name="symbolic_name">com.google.collect</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">18</field>
+		<field name="name">SBGN lib</field>
+		<field name="symbolic_name">org.sbgn</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">19</field>
+		<field name="name">SBGN plugin</field>
+		<field name="symbolic_name">org.pathvisio.sbgn</field>
+		<field name="type">plugin</field>
+		<field name="description">This plugin allows users to create pathway diagrams in the Systems Biology Graphical Notation (SBGN). A description of this standard notation can be found here: http://www.sbgn.org/Main_Page.</field>
+		<field name="faq"></field>
+		<field name="short_description">Draw diagrams with the Systems Biology Graphical Notation (SBGN)</field>
+		<field name="website">http://developers.pathvisio.org/wiki/SbgnPluginHelp</field>
+	</row>
+	<row>
+		<field name="bundle_id">20</field>
+		<field name="name">BioPAX3 plugin</field>
+		<field name="symbolic_name">org.pathvisio.biopax3</field>
+		<field name="type">plugin</field>
+		<field name="description">This plugin allows users to export and import pathways in BioPAX format. The plugin support BioPAX level 3. The import functionality is limited (pathways might need manual rearranging of objects).</field>
+		<field name="faq"></field>
+		<field name="short_description">Import and export pathways in BioPAX level 3.</field>
+		<field name="website">http://developers.pathvisio.org/wiki/BiopaxPluginHelp</field>
+	</row>
+	<row>
+		<field name="bundle_id">21</field>
+		<field name="name">PathVisio Commons Utils</field>
+		<field name="symbolic_name">org.pathvisio.ws.commons.util</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">22</field>
+		<field name="name">Apache Commons Codec</field>
+		<field name="symbolic_name">org.apache.commons.codec</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">25</field>
+		<field name="name">WikiPathways client</field>
+		<field name="symbolic_name">org.wikipathways.client</field>
+		<field name="type">lib</field>
+		<field name="description">WikiPathways Java library</field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website">www.wikipathways.org</field>
+	</row>
+	<row>
+		<field name="bundle_id">26</field>
+		<field name="name">WikiPathways plugin</field>
+		<field name="symbolic_name">org.pathvisio.wpclient</field>
+		<field name="type">plugin</field>
+		<field name="description">This plugin connects to the online pathway databases, WikiPathways, and allows users to search and browse pathways from PathVisio directly. It also enables updating and upload functionality (special permissions are required which can be requested from the WP developers).</field>
+		<field name="faq"></field>
+		<field name="short_description">Browse, search and update pathways from WikiPathways</field>
+		<field name="website">http://plugins.pathvisio.org/wp-client/</field>
+	</row>
+	<row>
+		<field name="bundle_id">27</field>
+		<field name="name">TypeConverter</field>
+		<field name="symbolic_name">org.pathvisio.typeconverter</field>
+		<field name="type">plugin</field>
+		<field name="description">This plugins allows the conversion of pathway elements into other types, e.g. a Label into a Metabolite or an Interaction into a GraphicalLine.</field>
+		<field name="faq"></field>
+		<field name="short_description">Convert a pathway element into another type, e.g. Label into Metabolite.</field>
+		<field name="website">http://plugins.pathvisio.org/typeconverter</field>
+	</row>
+	<row>
+		<field name="bundle_id">28</field>
+		<field name="name">NIMWiz</field>
+		<field name="symbolic_name">org.pathvisio.nimwiz</field>
+		<field name="type">plugin</field>
+		<field name="description">NIMWiz provides assistance in importing metabolomics data into PathVisio.It works with any data table with one column containing the names of metabolites. Nimwiz adds an extra column to that table containing identifiers from e.g. HMDB or ChEBI.Lookup is automatic where possible and manual where necessary. The assistance of the plugin greatly accelerates the lookup process.If there is an exact match in the dictionary, Nimwiz performs the lookup automatically. For near matches, Nimwiz lets you manually pick the best match from a list.</field>
+		<field name="faq"></field>
+		<field name="short_description">NIMWiz assists looking up identifiers for named metabolites/genes</field>
+		<field name="website">http://plugins.pathvisio.org/nimwiz/</field>
+	</row>
+	<row>
+		<field name="bundle_id">29</field>
+		<field name="name">PathSBML</field>
+		<field name="symbolic_name">pvplugins-PathSBML</field>
+		<field name="type">plugin</field>
+		<field name="description">The PathSBML plugin allows researchers to visualize and overlay data on the same pathway models they use in simulation experiments. Exporting these models as GPML would also allow them to be uploaded to Wikipathways for community curation. </field>
+		<field name="faq"></field>
+		<field name="short_description">The PathSBML plugin allows researchers to visualize and overlay data on the same pathway models they use in simulation experiments.</field>
+		<field name="website">http://plugins.pathvisio.org/sbml2gpml/</field>
+	</row>
+	<row>
+		<field name="bundle_id">30</field>
+		<field name="name">IntViz</field>
+		<field name="symbolic_name">org.pathvisio.intviz</field>
+		<field name="type">plugin</field>
+		<field name="description">Plugin to visualize data on Interactions.</field>
+		<field name="faq"></field>
+		<field name="short_description">Plugin to visualize data on Interactions.</field>
+		<field name="website">http://plugins.pathvisio.org/intviz/</field>
+	</row>
+	<row>
+		<field name="bundle_id">31</field>
+		<field name="name">InfoRegistry</field>
+		<field name="symbolic_name">org.pathvisio.inforegistry</field>
+		<field name="type">lib</field>
+		<field name="description">Module to register info providers for different data node types, like BiomartConnect for gene products, MetInfo for metabolites,...</field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">32</field>
+		<field name="name">BiomartConnect</field>
+		<field name="symbolic_name">org.pathvisio.biomartconnect</field>
+		<field name="type">plugin</field>
+		<field name="description">Plugin connects to Biomart to retrieve additional information about GeneProdcuts. The plugin currently implements three different Information Providers: BasicProvider, VariationProvider and SequenceProvider.</field>
+		<field name="faq"></field>
+		<field name="short_description">Plugin connects to Biomart to retrieve additional information about GeneProdcuts.</field>
+		<field name="website">http://plugins.pathvisio.org/biomartconnect/</field>
+	</row>
+	<row>
+		<field name="bundle_id">33</field>
+		<field name="name">ComplexViz</field>
+		<field name="symbolic_name">org.pathvisio.complexviz</field>
+		<field name="type">plugin</field>
+		<field name="description">ComplexViz is a PathVisio Plugin. It has been developed specially for simplifying visualization of data on the many complexes of Reactome pathways.</field>
+		<field name="faq"></field>
+		<field name="short_description">Plugin enables visualization of complex component node data on the parent complex.</field>
+		<field name="website">https://github.com/pennatula/ComplexViz</field>
+	</row>
+	<row>
+		<field name="bundle_id">34</field>
+		<field name="name">RegInt plugin</field>
+		<field name="symbolic_name">org.pathvisio.regint</field>
+		<field name="type">plugin</field>
+		<field name="description">RegInt is  a plugin that allows users to visualize regulatory interactions in the side panel of PathVisio</field>
+		<field name="faq"></field>
+		<field name="short_description">Visualize regulatory interactions in the side panel of PathVisio</field>
+		<field name="website">https://github.com/PathVisio/RegInt-Plugin</field>
+	</row>
+	<row>
+		<field name="bundle_id">35</field>
+		<field name="name">FindYourInteraction plugin</field>
+		<field name="symbolic_name">org.pathvisio.findyourinteraction</field>
+		<field name="type">plugin</field>
+		<field name="description">Query the Rhea webservice using the ChEBI/UniProt IDs or text labels of the two nodes the interaction connects to find identifiers. Automatically annotate the interaction with the selected identifier.</field>
+		<field name="faq"></field>
+		<field name="short_description">The FYI (FindYourInteractions) plugin suggests suitable identifiers for the interactions by querying</field>
+		<field name="website">http://plugins.pathvisio.org/FYI</field>
+	</row>
+	<row>
+		<field name="bundle_id">36</field>
+		<field name="name">WikiPathways Webservice API</field>
+		<field name="symbolic_name">org.wikipathways.webservice.api</field>
+		<field name="type">lib</field>
+		<field name="description">WP webservice API</field>
+		<field name="faq"></field>
+		<field name="short_description">WP webservice API</field>
+		<field name="website">https://github.com/wikipathways/wikipathways-api-client-java</field>
+	</row>
+	<row>
+		<field name="bundle_id">37</field>
+		<field name="name">org.apache.commons.logging</field>
+		<field name="symbolic_name">org.apache.commons.logging</field>
+		<field name="type">lib</field>
+		<field name="description"></field>
+		<field name="faq"></field>
+		<field name="short_description"></field>
+		<field name="website"></field>
+	</row>
+	<row>
+		<field name="bundle_id">38</field>
+		<field name="name">TissueAnalyzer</field>
+		<field name="symbolic_name">TissueAnalyzer</field>
+		<field name="type">plugin</field>
+		<field name="description">The TissueAnalyzer plugin for PathVisio provides a simple three step workflow for users to load, analyze and visualize tissue-specific pathway activity.</field>
+		<field name="faq"></field>
+		<field name="short_description">Importing baseline expression data from Expression Atlas</field>
+		<field name="website">http://projects.bigcat.unimaas.nl/tissueanalyzer/</field>
+	</row>
+	</table_data>
+	<table_data name="category">
+	<row>
+		<field name="category_id">1</field>
+		<field name="name">data visualization</field>
+	</row>
+	<row>
+		<field name="category_id">2</field>
+		<field name="name">data analysis</field>
+	</row>
+	<row>
+		<field name="category_id">3</field>
+		<field name="name">data integration</field>
+	</row>
+	<row>
+		<field name="category_id">4</field>
+		<field name="name">import</field>
+	</row>
+	<row>
+		<field name="category_id">5</field>
+		<field name="name">export</field>
+	</row>
+	<row>
+		<field name="category_id">6</field>
+		<field name="name">pathway building</field>
+	</row>
+	<row>
+		<field name="category_id">7</field>
+		<field name="name">ontology analysis</field>
+	</row>
+	<row>
+		<field name="category_id">11</field>
+		<field name="name">utility</field>
+	</row>
+	<row>
+		<field name="category_id">12</field>
+		<field name="name">online data access</field>
+	</row>
+	<row>
+		<field name="category_id">13</field>
+		<field name="name">pathway database</field>
+	</row>
+	<row>
+		<field name="category_id">14</field>
+		<field name="name">data import</field>
+	</row>
+	<row>
+		<field name="category_id">15</field>
+		<field name="name">metabolomics</field>
+	</row>
+	<row>
+		<field name="category_id">16</field>
+		<field name="name">curation</field>
+	</row>
+	<row>
+		<field name="category_id">17</field>
+		<field name="name">annotation</field>
+	</row>
+	</table_data>
+	<table_data name="profile">
+	</table_data>
+	<table_data name="bundle_version">
+	<row>
+		<field name="bundle_version_id">3</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.go/1.0.0/org.pathvisio.go-1.0.0.jar</field>
+		<field name="release_notes">&lt;ul&gt;
+&lt;li&gt;initial release&lt;/li&gt;
+&lt;li&gt;browsing the GO tree&lt;/li&gt;
+&lt;li&gt;specify GO term with GO identifier and visualize the pathway&lt;/li&gt;
+&lt;/ul&gt;</field>
+		<field name="release_date">2013-02-27</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.go/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">2</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">4</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.htmlexport/1.0.0/org.pathvisio.htmlexport-1.0.0.jar</field>
+		<field name="release_notes">&lt;ul&gt;
+&lt;il&gt; exports pathways as HTML pages&lt;/li&gt;
+&lt;li&gt; exports pathway statistics results as HTML pages with an index.html page&lt;/li&gt;
+&lt;/ul&gt;</field>
+		<field name="release_date">2013-03-22</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.htmlexport/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">3</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">5</field>
+		<field name="version">2.0.12</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.kohsuke.args4j/2.0.12/org.kohsuke.args4j-2.0.12.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2013-02-27</field>
+		<field name="license">http://opensource.org/licenses/MIT</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">4</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">7</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.ora.plugin/1.0.0/org.pathvisio.ora.plugin-1.0.0.jar</field>
+		<field name="release_notes">&lt;html&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial release for GSEA plugin&lt;/li&gt;
+&lt;li&gt;Can use a pathway collection or a gene set from MSigDB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/html&gt;</field>
+		<field name="release_date">2013-03-21</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.ora.plugin/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">5</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">8</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.pathvisio.ora/1.0.0/org.pathvisio.ora-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2013-03-21</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">6</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">9</field>
+		<field name="version">2.5.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/com.springsource.javax.servlet/2.5.0/com.springsource.javax.servlet-2.5.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://opensource.org/licenses/CDDL-1.0</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">SpringSource</field>
+		<field name="bundle_id">7</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">10</field>
+		<field name="version">1.0.9</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/com.springsource.org.jfree.chart/1.0.9/com.springsource.org.jfree.chart-1.0.9.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.gnu.org/licenses/gpl-3.0-standalone.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">SpringSource</field>
+		<field name="bundle_id">9</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">11</field>
+		<field name="version">1.0.12</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/com.springsource.org.jfree/1.0.12/com.springsource.org.jfree-1.0.12.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.gnu.org/licenses/lgpl-2.1.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">SpringSource</field>
+		<field name="bundle_id">8</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">12</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.mappbuilder/1.0.0/org.pathvisio.mappbuilder-1.0.0.jar</field>
+		<field name="release_notes">&lt;html&gt;&lt;ul&gt;&lt;li&gt;Initial release of plugin&lt;/li&gt;&lt;li&gt;Allows users to upload a file containing annotations for data nodes&lt;/li&gt;&lt;li&gt;Possibility to create new pathway or extend existing pathway&lt;/lI&gt;
+&lt;/ul&gt;</field>
+		<field name="release_date">2013-03-22</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.mappbuilder/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">10</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">26</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.xmlrpc/1.0.0/org.pathvisio.xmlrpc-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2013-04-23</field>
+		<field name="license">Apache License</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.xmlrpc/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics- BiGCaT, Maastricht University</field>
+		<field name="bundle_id">23</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">15</field>
+		<field name="version">3.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.xmlrpc/3.0.0/org.apache.xmlrpc-3.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">The Apache Software Foundation</field>
+		<field name="bundle_id">14</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">16</field>
+		<field name="version">1.4.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.commons.io/1.4.0/org.apache.commons.io.jar-1.4.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">The Apache Software Foundation</field>
+		<field name="bundle_id">13</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">17</field>
+		<field name="version">3.0.1</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.commons.httpclient/3.0.1/org.apache.commons.httpclient-3.0.1.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">The Apache Software Foundation</field>
+		<field name="bundle_id">12</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">18</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/pvplugins-bridgedbSettings/1.0.0/pvplugins-bridgedbSettings-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2013-03-25</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/pvplugins-bridgedbSettings/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics- BiGCaT, Maastricht University</field>
+		<field name="bundle_id">15</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">19</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/pvplugins-qsearch/1.0.0/pvplugins-qsearch-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2013-03-25</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/pvplugins-qsearch/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics- BiGCaT, Maastricht University</field>
+		<field name="bundle_id">16</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">20</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/com.google.collect/1.0.0/com.google.collect-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">17</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">21</field>
+		<field name="version">0.2.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.sbgn/0.2/org.sbgn-0.2.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">18</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">22</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.sbgn/1.0.0/org.pathvisio.sbgn-1.0.0.jar</field>
+		<field name="release_notes">&lt;ul&gt;
+&lt;li&gt;initial release&lt;/li&gt;
+&lt;li&gt;draw and view pathway diagrams in SBGN&lt;/li&gt;
+&lt;/ul&gt;</field>
+		<field name="release_date">2013-03-26</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.sbgn/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">19</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">23</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.biopax3/1.0.0/org.pathvisio.biopax3-1.0.0.jar</field>
+		<field name="release_notes">&lt;ul&gt;
+&lt;li&gt;initial release&lt;/li&gt;
+&lt;li&gt;export to BioPAX level 3&lt;/li&gt;
+&lt;li&gt;basic import functionality from BioPAX level 3 format&lt;/li&gt;
+&lt;/ul&gt;</field>
+		<field name="release_date">2013-03-26</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.biopax3/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">20</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">24</field>
+		<field name="version">1.0.2</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.pathvisio.ws.commons.util/1.0.2/org.pathvisio.ws.commons.util-1.0.2.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor">Department of Bioinformatics- BiGCaT, Maastricht University</field>
+		<field name="bundle_id">21</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">25</field>
+		<field name="version">1.5.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.commons.codec/1.5/org.apache.commons.codec-1.5.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">0000-00-00</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">22</field>
+		<field name="pv_required"></field>
+		<field name="pv_tested"></field>
+	</row>
+	<row>
+		<field name="bundle_version_id">27</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.minimap/1.0.0/org.pathvisio.minimap-1.0.0.jar</field>
+		<field name="release_notes">initial release of the mini map plugin</field>
+		<field name="release_date">2013-09-12</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.minimap/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">24</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.0.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">28</field>
+		<field name="version">3.1.1</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.wikipathways.client/3.1.1/org.wikipathways.client-3.1.1.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2013-10-29</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">25</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.1</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">29</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/1.0.0/org.pathvisio.wpclient-1.0.0.jar</field>
+		<field name="release_notes">First release with search, browse, update and upload functionality.</field>
+		<field name="release_date">2014-01-20</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">26</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">30</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.typeconverter/1.0.0/org.pathvisio.typeconverter-1.0.0.jar</field>
+		<field name="release_notes">Enables conversion from:
+- Label to GeneProduct, Metabolite, Protein, Rna, Pathway
+- Interaction to GraphicalLine
+GraphicalLine to Interaction
+- Unknown to GeneProduct, Metabolite, Protein, RNA, Pathway
+- GeneProduct to Metabolite, Protein, RNA, Pathway
+- Protein to GeneProduct, Metabolite, RNA, Pathway
+- Metabolite to GeneProduct, Protein, RNA, Pathway
+- RNA to GeneProduct, Metabolite, Protein, Pathway
+- Pathway to GeneProduct, Metabolite, Protein, RNA</field>
+		<field name="release_date">2014-03-10</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.typeconverter/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">27</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">31</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.nimwiz/1.0.0/org.pathvisio.nimwiz-1.0.0.jar</field>
+		<field name="release_notes">Initial release</field>
+		<field name="release_date">2014-03-10</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.nimwiz/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">28</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">32</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/pvplugins-PathSBML/1.0.0/pvplugins-PathSBML-1.0.0.jar</field>
+		<field name="release_notes">- Import SBML models (local files + directly from Biomodels)&lt;br/&gt;
+- SBML sidepane shows model structure&lt;br/&gt;
+- Backpage shows model annotations&lt;br/&gt;
+- Validate SBML models.&lt;br/&gt;
+- Apply layout to the imported SBML model (Does not work for large models)</field>
+		<field name="release_date">2014-06-14</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/pvplugins-PathSBML/PathSBML-logo.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">29</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">33</field>
+		<field name="version">1.1.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.sbgn/1.1.0/org.pathvisio.sbgn-1.1.0.jar</field>
+		<field name="release_notes">Annotation feature added for Arcs for both import and export.</field>
+		<field name="release_date">2014-07-08</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.sbgn/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">19</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">34</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.intviz/1.0.0/org.pathvisio.intviz-1.0.0.jar</field>
+		<field name="release_notes">Visualize single or multiple data columns on interactions, using colours, colour gradients, and text.</field>
+		<field name="release_date">2014-08-20</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.intviz/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">30</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">35</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.pathvisio.inforegistry/1.0.0/org.pathvisio.inforegistry-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2014-08-27</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url"></field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">31</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">36</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.biomartconnect/1.0.0/org.pathvisio.biomartconnect-1.0.0.jar</field>
+		<field name="release_notes">First release:
+- BasicProvider
+- VariationProvider
+- SequenceProvider
+
+Tested for human pathways but will be extended for all supported species. </field>
+		<field name="release_date">2014-08-27</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.biomartconnect/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">32</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.1.3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">37</field>
+		<field name="version">1.1.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.typeconverter/1.1.0/org.pathvisio.typeconverter-1.1.0.jar</field>
+		<field name="release_notes">Data nodes can now also be converted to Labels.</field>
+		<field name="release_date">2015-04-06</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.typeconverter/plugin.png</field>
+		<field name="bundle_vendor"></field>
+		<field name="bundle_id">27</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.2.0</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">38</field>
+		<field name="version">0.1.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.complexviz/0.1.0/org.pathvisio.complexviz-0.1.0.jar</field>
+		<field name="release_notes">&lt;html&gt;Features include: &lt;ul&gt;&lt;li&gt;Highlighting components of a complex&lt;/li&gt;&lt;li&gt;Showing complex components in the &lt;i&gt;Components&lt;/i&gt; sidepanel, also with the data visualized&lt;/li&gt;&lt;li&gt;Calculating scores for complexes based on a user-defined criterion&lt;/li&gt;&lt;li&gt;Visualizing the complex scores on the complex nodes to highlight the complexes of interest&lt;/li&gt;&lt;li&gt;Change border colour of a complex and its components to highlight whichcomponents belong to which complex&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</field>
+		<field name="release_date">2015-11-30</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.complexviz/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">33</field>
+		<field name="pv_required">3.2.1</field>
+		<field name="pv_tested">3.2.1</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">39</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.regint/1.0.0/org.pathvisio.regint-1.0.0.jar</field>
+		<field name="release_notes">&lt;html&gt;Features include: &lt;ul&gt;&lt;li&gt;Loading multiple regulatory interaction files&lt;/li&gt;&lt;li&gt;Regulators and targets can be visualized in the side panel&lt;/li&gt;&lt;li&gt;Data can be visualized on the data nodes in the side panel&lt;/li&gt;&lt;li&gt;User can choose which sorting to use for the data nodes in the side panel&lt;/li&gt;&lt;li&gt;User can choose which regulatory interaction files should be used&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</field>
+		<field name="release_date">2015-12-18</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.regint/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">34</field>
+		<field name="pv_required">3.2.1</field>
+		<field name="pv_tested">3.2.1</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">40</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.findyourinteraction/1.0.0/org.pathvisio.findyourinteraction-1.0.0.jar</field>
+		<field name="release_notes"></field>
+		<field name="release_date">2016-04-04</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.findyourinteraction/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">35</field>
+		<field name="pv_required">3.2.1</field>
+		<field name="pv_tested">3.2.1</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">41</field>
+		<field name="version">3.2.1</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.wikipathways.webservice.api/3.2.1/org.wikipathways.webservice.api-3.2.1.jar</field>
+		<field name="release_notes">&lt;html&gt;New Java API&lt;/html&gt;</field>
+		<field name="release_date">2015-10-07</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url" xsi:nil="true" />
+		<field name="bundle_vendor">WikiPathways</field>
+		<field name="bundle_id">36</field>
+		<field name="pv_required" xsi:nil="true" />
+		<field name="pv_tested" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="bundle_version_id">42</field>
+		<field name="version">1.1.1</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/org.pathvisio.wpclient/1.1.1/org.pathvisio.wpclient-1.1.1.jar</field>
+		<field name="release_notes">Updated Java library version. Fixed bug in search by xref function.</field>
+		<field name="release_date">2016-04-04</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/plugin.png</field>
+		<field name="bundle_vendor">WikiPathways</field>
+		<field name="bundle_id">26</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.2.1</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">43</field>
+		<field name="version">1.6.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.commons.codec/1.6.0/org.apache.commons.codec-1.6.0.jar</field>
+		<field name="release_notes" xsi:nil="true" />
+		<field name="release_date">2011-12-02</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url" xsi:nil="true" />
+		<field name="bundle_vendor">The Apache Software Foundation</field>
+		<field name="bundle_id">22</field>
+		<field name="pv_required" xsi:nil="true" />
+		<field name="pv_tested" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="bundle_version_id">44</field>
+		<field name="version">2.4.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.commons.io/2.4.0/org.apache.commons.io-2.4.0.jar</field>
+		<field name="release_notes" xsi:nil="true" />
+		<field name="release_date">2012-06-12</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url" xsi:nil="true" />
+		<field name="bundle_vendor">The Apache Software Foundation</field>
+		<field name="bundle_id">13</field>
+		<field name="pv_required" xsi:nil="true" />
+		<field name="pv_tested" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="bundle_version_id">45</field>
+		<field name="version">1.1.3</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.apache.commons.logging/1.1.3/org.apache.commons.logging-1.1.3.jar</field>
+		<field name="release_notes" xsi:nil="true" />
+		<field name="release_date">2013-05-16</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url" xsi:nil="true" />
+		<field name="bundle_vendor">The Apache Software Foundation</field>
+		<field name="bundle_id">37</field>
+		<field name="pv_required" xsi:nil="true" />
+		<field name="pv_tested" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="bundle_version_id">46</field>
+		<field name="version">1.0.0</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/TissueAnalyzer/1.0.0/TissueAnalyzer-1.0.0.jar</field>
+		<field name="release_notes">&lt;html&gt;Features include: &lt;ul&gt;&lt;li&gt;Importing baseline experiments from Expression Atlas&lt;/li&gt;&lt;li&gt;Calculating tissue-specific pathway activity&lt;/li&gt;&lt;li&gt;Data visualization&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</field>
+		<field name="release_date">2016-04-05</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/TissueAnalyzer/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">38</field>
+		<field name="pv_required">3.0.0</field>
+		<field name="pv_tested">3.2.1</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">47</field>
+		<field name="version">3.2.3</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/libs/org.wikipathways.webservice.api/3.2.3/org.wikipathways.webservice.api-3.2.3.jar</field>
+		<field name="release_notes">&lt;html&gt;WikiPathways Java API v3.2.3&lt;/html&gt;</field>
+		<field name="release_date">2016-09-21</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url" xsi:nil="true" />
+		<field name="bundle_vendor">WikiPathways</field>
+		<field name="bundle_id">36</field>
+		<field name="pv_required" xsi:nil="true" />
+		<field name="pv_tested" xsi:nil="true" />
+	</row>
+	<row>
+		<field name="bundle_version_id">48</field>
+		<field name="version">1.1.2</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/1.1.2/org.pathvisio.wpclient-1.1.2.jar</field>
+		<field name="release_notes">&lt;html&gt;Feature/bug fix release&lt;ul&gt;&lt;li&gt;updated WP Java API library (3.2.3) and BridgeDb libs (2.2.0)&lt;/li&gt;&lt;li&gt;plugin takes wpid command line argument and opens WikiPathways pathway with that identifier on startup&lt;/li&gt;&lt;li&gt;special characters in username and password are now not causing problems anymore&lt;/li&gt;&lt;li&gt;description is added to pathway when uploading a new pathway&lt;/li&gt;&lt;li&gt;before uploading new pathway, plugin checks if organism is set correctly&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</field>
+		<field name="release_date">2016-09-21</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">26</field>
+		<field name="pv_required">3.2.3</field>
+		<field name="pv_tested">3.2.3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">49</field>
+		<field name="version">1.1.3</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/1.1.3/org.pathvisio.wpclient-1.1.3.jar</field>
+		<field name="release_notes">&lt;html&gt;Feature release&lt;ul&gt;&lt;li&gt;BridgeDb webservice connection&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</field>
+		<field name="release_date">2016-11-17</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.wpclient/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">26</field>
+		<field name="pv_required">3.2.3</field>
+		<field name="pv_tested">3.2.3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">50</field>
+		<field name="version">1.0.1</field>
+		<field name="jar_file_url">http://repository.pathvisio.org/plugins/org.pathvisio.findyourinteraction/1.0.1/org.pathvisio.findyourinteraction-1.0.1.jar</field>
+		<field name="release_notes">&lt;html&gt;Feature/bug fix release&lt;ul&gt;&lt;li&gt;bug fixes&lt;/li&gt;&lt;li&gt;code cleanup&lt;/li&gt;&lt;li&gt;license header&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</field>
+		<field name="release_date">2018-04-25</field>
+		<field name="license">http://www.apache.org/licenses/LICENSE-2.0.html</field>
+		<field name="icon_url">http://repository.pathvisio.org/plugins/org.pathvisio.findyourinteraction/plugin.png</field>
+		<field name="bundle_vendor">Department of Bioinformatics - BiGCaT, Maastricht University</field>
+		<field name="bundle_id">35</field>
+		<field name="pv_required">3.2.3</field>
+		<field name="pv_tested">3.3.0</field>
+	</row>
+	</table_data>
+	<table_data name="bundle_categories">
+	<row>
+		<field name="bundle_id">2</field>
+		<field name="category_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_id">2</field>
+		<field name="category_id">6</field>
+	</row>
+	<row>
+		<field name="bundle_id">2</field>
+		<field name="category_id">7</field>
+	</row>
+	<row>
+		<field name="bundle_id">3</field>
+		<field name="category_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_id">5</field>
+		<field name="category_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_id">10</field>
+		<field name="category_id">4</field>
+	</row>
+	<row>
+		<field name="bundle_id">10</field>
+		<field name="category_id">6</field>
+	</row>
+	<row>
+		<field name="bundle_id">15</field>
+		<field name="category_id">11</field>
+	</row>
+	<row>
+		<field name="bundle_id">16</field>
+		<field name="category_id">11</field>
+	</row>
+	<row>
+		<field name="bundle_id">19</field>
+		<field name="category_id">6</field>
+	</row>
+	<row>
+		<field name="bundle_id">20</field>
+		<field name="category_id">4</field>
+	</row>
+	<row>
+		<field name="bundle_id">20</field>
+		<field name="category_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_id">23</field>
+		<field name="category_id">1</field>
+	</row>
+	<row>
+		<field name="bundle_id">23</field>
+		<field name="category_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_id">23</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">23</field>
+		<field name="category_id">6</field>
+	</row>
+	<row>
+		<field name="bundle_id">24</field>
+		<field name="category_id">11</field>
+	</row>
+	<row>
+		<field name="bundle_id">26</field>
+		<field name="category_id">4</field>
+	</row>
+	<row>
+		<field name="bundle_id">26</field>
+		<field name="category_id">12</field>
+	</row>
+	<row>
+		<field name="bundle_id">26</field>
+		<field name="category_id">13</field>
+	</row>
+	<row>
+		<field name="bundle_id">27</field>
+		<field name="category_id">16</field>
+	</row>
+	<row>
+		<field name="bundle_id">28</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">28</field>
+		<field name="category_id">14</field>
+	</row>
+	<row>
+		<field name="bundle_id">28</field>
+		<field name="category_id">15</field>
+	</row>
+	<row>
+		<field name="bundle_id">29</field>
+		<field name="category_id">4</field>
+	</row>
+	<row>
+		<field name="bundle_id">29</field>
+		<field name="category_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_id">29</field>
+		<field name="category_id">6</field>
+	</row>
+	<row>
+		<field name="bundle_id">29</field>
+		<field name="category_id">12</field>
+	</row>
+	<row>
+		<field name="bundle_id">30</field>
+		<field name="category_id">1</field>
+	</row>
+	<row>
+		<field name="bundle_id">30</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">32</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">32</field>
+		<field name="category_id">12</field>
+	</row>
+	<row>
+		<field name="bundle_id">32</field>
+		<field name="category_id">14</field>
+	</row>
+	<row>
+		<field name="bundle_id">33</field>
+		<field name="category_id">1</field>
+	</row>
+	<row>
+		<field name="bundle_id">33</field>
+		<field name="category_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_id">33</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">34</field>
+		<field name="category_id">1</field>
+	</row>
+	<row>
+		<field name="bundle_id">34</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">34</field>
+		<field name="category_id">14</field>
+	</row>
+	<row>
+		<field name="bundle_id">35</field>
+		<field name="category_id">12</field>
+	</row>
+	<row>
+		<field name="bundle_id">35</field>
+		<field name="category_id">16</field>
+	</row>
+	<row>
+		<field name="bundle_id">35</field>
+		<field name="category_id">17</field>
+	</row>
+	<row>
+		<field name="bundle_id">38</field>
+		<field name="category_id">1</field>
+	</row>
+	<row>
+		<field name="bundle_id">38</field>
+		<field name="category_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_id">38</field>
+		<field name="category_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_id">38</field>
+		<field name="category_id">12</field>
+	</row>
+	</table_data>
+	<table_data name="bundle_version_author">
+	<row>
+		<field name="bundle_version_id">3</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">4</field>
+		<field name="developer_id">3</field>
+		<field name="affiliation_id">4</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">7</field>
+		<field name="developer_id">4</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">7</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">12</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">12</field>
+		<field name="developer_id">4</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">12</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">18</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">19</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">22</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">23</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">26</field>
+		<field name="developer_id">6</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">27</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">27</field>
+		<field name="developer_id">7</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">29</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">29</field>
+		<field name="developer_id">8</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">30</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">31</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">31</field>
+		<field name="developer_id">9</field>
+		<field name="affiliation_id">4</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">32</field>
+		<field name="developer_id">2</field>
+		<field name="affiliation_id">3</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">32</field>
+		<field name="developer_id">6</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">32</field>
+		<field name="developer_id">10</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">33</field>
+		<field name="developer_id">6</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">34</field>
+		<field name="developer_id">6</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">34</field>
+		<field name="developer_id">12</field>
+		<field name="affiliation_id">6</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">35</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">35</field>
+		<field name="developer_id">8</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">35</field>
+		<field name="developer_id">11</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">36</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">36</field>
+		<field name="developer_id">8</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">36</field>
+		<field name="developer_id">11</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">38</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">38</field>
+		<field name="developer_id">6</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">39</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">39</field>
+		<field name="developer_id">13</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">40</field>
+		<field name="developer_id">6</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">40</field>
+		<field name="developer_id">14</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">42</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">46</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">46</field>
+		<field name="developer_id">14</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">48</field>
+		<field name="developer_id">3</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">48</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">48</field>
+		<field name="developer_id">8</field>
+		<field name="affiliation_id">5</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">48</field>
+		<field name="developer_id">14</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">49</field>
+		<field name="developer_id">14</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	<row>
+		<field name="bundle_version_id">50</field>
+		<field name="developer_id">5</field>
+		<field name="affiliation_id">2</field>
+	</row>
+	</table_data>
+	<table_data name="profile_categories">
+	</table_data>
+	<table_data name="repository_bundles">
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">3</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">4</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">5</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">7</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">8</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">9</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">10</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">11</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">12</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">15</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">16</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">17</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">18</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">19</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">20</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">21</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">22</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">23</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">24</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">25</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">26</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">27</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">28</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">29</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">30</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">31</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">32</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">33</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">34</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">35</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">36</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">38</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">39</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">40</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">41</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">42</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">43</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">44</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">45</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">46</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">47</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">48</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">49</field>
+	</row>
+	<row>
+		<field name="repository_id">1</field>
+		<field name="bundle_version_id">50</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>
