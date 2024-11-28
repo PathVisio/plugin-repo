@@ -70,13 +70,15 @@ jobs:
 
             table_html+="</table>"
 
-            # Add parent directory link if not root
+            # Add parent directory link if not root (only once)
             if [[ "$dir" != "." ]]; then
-              table_html+='<p><a href="../">Parent directory</a></p>'
+              parent_link='<p><a href="../">Parent directory</a></p>'
+            else
+              parent_link=""
             fi
 
             # Generate and save the index.html
-            index_html="$header_html$table_html$footer_html"
+            index_html="$header_html$table_html$parent_link$footer_html"
             echo "$index_html" > "$dir/index.html"
           done
 
