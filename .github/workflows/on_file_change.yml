@@ -11,7 +11,7 @@ on:
 jobs:
   update-indexes:
     runs-on: ubuntu-latest  
-    name: Update file index pages
+    name: Update File Index Pages
     steps:
       # Checkout the repository
       - uses: actions/checkout@v4
@@ -30,7 +30,7 @@ jobs:
             **/*.html
 
       # Generate updated index files
-      - name: Generate index files
+      - name: Generate Index Files
         run: |
           header_html="$(cat template_header.html)"
           footer_html="$(cat template_footer.html)"
@@ -68,17 +68,18 @@ jobs:
               table_html+=$'\n'
             done
 
+            # Close the table
             table_html+="</table>"
 
             # Add parent directory link if not root (only once)
             if [[ "$dir" != "." ]]; then
-              parent_link='<p><a href="../">Parent directory</a></p>'
+              parent_html='<p><a href="../">Parent directory</a></p>'
             else
-              parent_link=""
+              parent_html=""
             fi
 
-            # Generate and save the index.html
-            index_html="$header_html$table_html$parent_link$footer_html"
+            # Assemble and save HTML
+            index_html="$header_html$table_html$parent_html$footer_html"
             echo "$index_html" > "$dir/index.html"
           done
 
