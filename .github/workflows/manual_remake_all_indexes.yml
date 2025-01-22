@@ -24,16 +24,16 @@ jobs:
           table_html+="<thead class=\"table-dark\"><tr><th>Folder Name</th><th>Last Modified</th></tr></thead>"
           table_html+=$'\n'
           unique_type_dirs=()
-          # Loop through all folders in the directory
-          for subdir in $(find . -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort -rn); do
+          # Loop through all top-level directories
+          for subdir in $(find . -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort); do
             folder=$(basename "$subdir")
-            # Collect unique list of release folders
+            # Collect unique list of directories
             if [[ ! " ${unique_type_dirs[@]} " =~ " ${folder} " ]]; then
               unique_type_dirs+=("$folder")
             fi
             # Get the last modified date
-            modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
-            # Create a table row with the folder information
+            modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %I:%M %p' -- "$subdir" 2>/dev/null || date -r "$subdir" '+%d %b %Y %I:%M %p')
+            # Create a table row with folder information
             table_html+="<tr><td><a class=\"file-link\" href=\"$folder\">$folder</a></td><td>$modified</td></tr>"
             table_html+=$'\n'
           done
@@ -42,63 +42,44 @@ jobs:
           home_html="$header_html$table_html$footer_html"
           echo "$home_html" > "./index.html"
 
-          ## MAKE FOLDER TABLES for plugins and libs ##
-          for type_dir in "${unique_type_dirs[@]}"; do
-            echo "Working on: $type_dir"
-            table_html=""
+          ## RECURSIVELY GENERATE TABLES FOR ALL DIRECTORIES ##
+          generate_table_for_directory() {
+            local dir_path="$1"
+            echo "Working on: $dir_path"
+            local table_html=""
             table_html+="<table class=\"table table-striped table-bordered table-hover\">"
-            table_html+="<thead class=\"table-dark\"><tr><th>Folder Name</th><th>Last Modified</th></tr></thead>"
+            table_html+="<thead class=\"table-dark\"><tr><th>Name</th><th>Last Modified</th></tr></thead>"
             table_html+=$'\n'
-            unique_plugin_dirs=()
-            # Loop through all folders in the type directory
-            for subdir in $(find "$type_dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort); do
-              folder=$(basename "$subdir")
-              # Collect unique list of plugin folders
-              if [[ ! " ${unique_plugin_dirs[@]} " =~ " ${folder} " ]]; then
-                unique_plugin_dirs+=("$folder")
+            # Iterate through all items in the current directory
+            for item in "$dir_path"/*; do
+              [ -e "$item" ] || continue  # Skip if no items exist
+              local name=$(basename "$item")
+              local modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %I:%M %p' -- "$item" 2>/dev/null || date -r "$item" '+%d %b %Y %I:%M %p')
+              local link="$name"
+              if [ -d "$item" ]; then
+                link="$name/"
+                # Recursively process subdirectories
+                generate_table_for_directory "$item"
               fi
-              # Get the last modified date
-              modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
-              # Create a table row with the folder information
-              table_html+="<tr><td><a class=\"file-link\" href=\"$folder\">$folder</a></td><td>$modified</td></tr>"
+              table_html+="<tr><td><a class=\"file-link\" href=\"$link\">$name</a></td><td>$modified</td></tr>"
               table_html+=$'\n'
             done
             table_html+="</table>"
-            # Add parent link (expect top level index)
+            # Add parent directory link
             table_html+='<p><a href="../">Parent directory</a></p>'
             # Assemble and save HTML
-            folder_html="$header_html$table_html$footer_html"
-            echo "$folder_html" > "$type_dir/index.html"
+            local header_html="$(cat template_header.html)"
+            local footer_html="$(cat template_footer.html)"
+            local full_html="$header_html$table_html$footer_html"
+            echo "$full_html" > "$dir_path/index.html"
+          }
 
-            ## MAKE FILE TABLE PER PLUGIN ##
-            for plugin_dir in "${unique_plugin_dirs[@]}"; do
-              echo "Working on: $type_dir/$plugin_dir"
-              table_html=""
-              table_html+="<table class=\"table table-striped table-bordered table-hover\">"
-              table_html+="<thead class=\"table-dark\"><tr><th>File Name</th><th>File Size</th><th>Last Modified</th></tr></thead>"
-              table_html+=$'\n'
-              # Loop through all files in the plugin directory
-              for file in $(find "$type_dir/$plugin_dir" -mindepth 1 -maxdepth 1 -type f ! -name "*.html" | sort); do
-                if [[ -f "$file" ]]; then
-                  # Get the file name, size, and last modified date
-                  filename=$(basename "$file")
-                  filesize=$(du -h "$file" | cut -f1)
-                  modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$file")
-                  # Create a table row with the file information
-                  table_html+="<tr><td><a class=\"file-link\" href=\"$filename\">$filename</a></td><td>$filesize</td><td>$modified</td></tr>"
-                  table_html+=$'\n'
-                fi
-              done
-              table_html+="</table>"
-              # Add parent link (expect top level index)
-              table_html+='<p><a href="../">Parent directory</a></p>'
-              # Assemble and save HTML
-              file_html="$header_html$table_html$footer_html"
-              echo "$file_html" > "$type_dir/$plugin_dir/index.html"
-            done
+          # Call the recursive function for top-level directories
+          for type_dir in "${unique_type_dirs[@]}"; do
+            generate_table_for_directory "$type_dir"
           done
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update file index pages
-          file_pattern: 'index.html **/index.html'
+          commit_message: 'Update file index pages'
+          file_pattern: '**/index.html'
