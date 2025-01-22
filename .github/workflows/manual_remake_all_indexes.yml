@@ -22,14 +22,14 @@ jobs:
           table_html+="<table class=\"table table-striped table-bordered table-hover\">"
           table_html+="<thead class="table-dark"><tr><th>Folder Name</th><th>Last Modified</th></tr></thead>"
           table_html+=$'\n'
-          unique_release_dirs=()
+          unique_type_dirs=()
           # Loop through all folders in the directory
           for subdir in $(find . -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort -rn)
           do
             folder=$(basename $subdir)
             # Collect unique list of release folders
-            if [[ ! " ${unique_release_dirs[@]} " =~ " ${folder} " ]]; then
-              unique_release_dirs+=("$folder")
+            if [[ ! " ${unique_type_dirs[@]} " =~ " ${folder} " ]]; then
+              unique_type_dirs+=("$folder")
             fi
             # Get the last modified date
             modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
@@ -41,17 +41,18 @@ jobs:
           # Assemble and save HTML
           home_html="$header_html$table_html$footer_html"
           echo "$home_html" > "./index.html"
-          ## MAKE RELEASE FOLDER TABLES ##
-          for release_dir in ${unique_release_dirs[@]}
+          
+          ## MAKE FOLDER TABLES for plugins and libs ##
+          for type_dir in ${unique_type_dirs[@]}
           do
-            echo "Working on: $release_dir"
+            echo "Working on: $type_dir"
             table_html=""
             table_html+="<table class=\"table table-striped table-bordered table-hover\">"
             table_html+="<thead class="table-dark"><tr><th>Folder Name</th><th>Last Modified</th></tr></thead>"
             table_html+=$'\n'
             unique_type_dirs=()
             # Loop through all folders in the directory
-            for subdir in $(find "$release_dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort)
+            for subdir in $(find "$type_dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort)
             do
               folder=$(basename $subdir)
               # Collect unique list of type folders
@@ -69,35 +70,65 @@ jobs:
             table_html+='<p><a href="../">Parent directory</a></p>'
             # Assemble and save HTML
             folder_html="$header_html$table_html$footer_html"
-            echo "$folder_html" > "$release_dir/index.html"
-            # Loop through all folders in the directory
-           ## MAKE FILE TABLE PER TYPE ##
-            for dir in ${unique_type_dirs[@]}
-            do
-              echo "Working on: $release_dir/$dir"
-              table_html=""
-              table_html+="<table class=\"table table-striped table-bordered table-hover\">"
-              table_html+="<thead class=table-dark><tr><th>File Name</th><th>File Size</th><th>Last Modified</th></tr></thead>"
-              table_html+=$'\n'
-              # Loop through all files in the directory
-              for file in $(find "$release_dir/$dir" -mindepth 1 -maxdepth 1 -type f ! -name "*.html" | sort)
-              do
-                if [[ -f "$file" ]]; then
-                  # Get the file name, size, and last modified date
-                  filename=$(basename "$file")
-                  filesize=$(du -h "$file" | cut -f1)
-                  modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$file")
-                  # Create a table row with the file information
-                  table_html+="<tr><td><a class="file-link" id="File" href=\"$filename\">$filename</a></td><td>$filesize</td><td>$modified</td></tr>"
+            echo "$folder_html" > "$type_dir/index.html"
+            
+            for plugin_dir in ${unique_type_dirs[@]} do
+                echo "Working on: $plugin_dir"
+                table_html=""
+                table_html+="<table class=\"table table-striped table-bordered table-hover\">"
+                table_html+="<thead class="table-dark"><tr><th>Folder Name</th><th>Last Modified</th></tr></thead>"
+                table_html+=$'\n'
+                unique_plugin_dirs=()
+                # Loop through all folders in the directory
+                for subdir in $(find "$plugin_dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort)
+                do
+                    folder=$(basename $subdir)
+                    # Collect unique list of type folders
+                    if [[ ! " ${unique_plugin_dirs[@]} " =~ " ${folder} " ]]; then
+                        unique_plugin_dirs+=("$folder")
+                    fi
+                    # Get the last modified date
+                    modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$subdir")
+                    # Create a table row with the file information 
+                    table_html+="<tr><td><a class="file-link" href=\"$folder\">$folder</a></td><td>$modified</td></tr>"
+                    table_html+=$'\n'
+                done
+                table_html+="</table>"
+                # Add parent link (expect top level index)
+                table_html+='<p><a href="../">Parent directory</a></p>'
+                # Assemble and save HTML
+                folder_html="$header_html$table_html$footer_html"
+                echo "$folder_html" > "$plugin_dir/index.html"
+                
+                
+                ## MAKE FILE TABLE PER TYPE ##
+                for dir in ${unique_plugin_dirs[@]}
+                do
+                  echo "Working on: $type_dir/$plugin_dir/$dir"
+                  table_html=""
+                  table_html+="<table class=\"table table-striped table-bordered table-hover\">"
+                  table_html+="<thead class=table-dark><tr><th>File Name</th><th>File Size</th><th>Last Modified</th></tr></thead>"
                   table_html+=$'\n'
-                fi
-              done
-              table_html+="</table>"
-              # Add parent link (expect top level index)
-              table_html+='<p><a href="../">Parent directory</a></p>'
-              # Assemble and save HTML
-              file_html="$header_html$table_html$footer_html"
-              echo "$file_html" > "$release_dir/$dir/index.html"
+                  # Loop through all files in the directory
+                  for file in $(find "$type_dir/$plugin_dir/$dir" -mindepth 1 -maxdepth 1 -type f ! -name "*.html" | sort)
+                  do
+                    if [[ -f "$file" ]]; then
+                      # Get the file name, size, and last modified date
+                      filename=$(basename "$file")
+                      filesize=$(du -h "$file" | cut -f1)
+                      modified=$(git log -1 --format=%cd --date=format:'%d %b %Y %l:%M %p' -- "$file")
+                      # Create a table row with the file information
+                      table_html+="<tr><td><a class="file-link" id="File" href=\"$filename\">$filename</a></td><td>$filesize</td><td>$modified</td></tr>"
+                      table_html+=$'\n'
+                    fi
+                  done
+                  table_html+="</table>"
+                  # Add parent link (expect top level index)
+                  table_html+='<p><a href="../">Parent directory</a></p>'
+                  # Assemble and save HTML
+                  file_html="$header_html$table_html$footer_html"
+                  echo "$file_html" > "$type_dir/$plugin_dir/$dir/index.html"
+                done
             done
           done
           
